@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <script defer src="script.js"></script> <!-- Link external JS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #text {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            resize: none;
+        }
+        .playButton {
+            width: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speech to Text Converter</h1>
+
+    <div id="wrapper">
+        <textarea id="text" name="text" rows="4" style="overflow: hidden; height: 160px;"></textarea>
+    </div>
+
+    <div class="container">
+        <br><br>
+        <img id="playButton" class="playButton" src="https://cdn-icons-png.flaticon.com/512/25/25645.png" alt="Microphone">
+        <br>
+        <span class="instruction">Click on the mic to start recording</span>
+    </div>
+
+    <script>
+        speechToTextConversion();
+    </script>
+</body>
+</html>
